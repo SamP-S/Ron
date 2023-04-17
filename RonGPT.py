@@ -1,9 +1,10 @@
 import openai
+import os
 
 class Ron:
     def __init__(self):
         # initialise gpt
-        openai.api_key = "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"
+        openai.api_key = os.environ["OPENAI_API_KEY"]
         self.messages = []
         self.responses = []
         self.messages.append({"role":"system","content":"chatbot"})
